@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Main</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__header-column">
+        <a href="/">
+          <img src="../static/images/logo.png" class="logo" />
+        </a>
+      </div>
+      <div class="header__header-column">
+        <div class="header__menu">
+          <a href="#">
+            <div class="header__menu-list">공지사항 키워드 설정</div>
+          </a>
+          <a href="/check">
+            <div class="header__menu-list">나만의 공지사항 보기</div>
+          </a>
+        </div>
+        <form method="POST" action="/search">
+          <div class="header__search">
+            <input
+              type="text"
+              name="search"
+              class="header__search-input"
+              placeholder="검색"
+            />
+            <input type="submit" class="header__search-btn" value="검색">
+          </div>
+        </form>
+      </div>
+    </header>
+    <div class="notice">
+      <a href="/haksa"><div class="notice__btn">학사</div></a>
+      <a href="/iphak"><div class="notice__btn">입학</div></a>
+      <a href="/recruit"><div class="notice__btn">모집/채용</div></a>
+      <a href="/volunteer"><div class="notice__btn">사회봉사</div></a>
+    </div>
+    <div class="notice">
+      <a href="/research"><div class="notice__btn">산학/연구</div></a>
+      <a href="/event"><div class="notice__btn">행사</div></a>
+      <a href="/scholarship"><div class="notice__btn">장학</div></a>
+      <a href="/seminar"><div class="notice__btn">학회/세미나</div></a>
+    </div>
+  <script type="text/javascript">
+
+    </script>
+  </body>
+</html>

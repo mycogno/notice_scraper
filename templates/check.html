@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+       <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+</head>
+<body>
+    <a href="/">
+       <img src="../static/images/logo.png" class="logo" />
+   </a>
+    <h1>담긴 공지사항</h1>
+  <div>
+      <table width="70%">
+          {% for i in range(leng) %}
+            <tr height="50" bgcolor="97eefc">
+                <td> <a href="{{ href[i] }}" target="_blank">  {{ check_list[i] }}</a></td>
+            </tr>
+          {% endfor %}
+          </table>
+      </div>
+</body>
+</html>
